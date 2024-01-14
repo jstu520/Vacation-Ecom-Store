@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Area</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto
+    :wght@300;400&display=swap" rel="stylesheet">
+    <style>
+    /* CSS Styles /
+    / Add common styles here /
+    / Add media queries at the end */
+    </style>
+    <script src="https://unpkg.com/parse/dist/parse.min.js"></script>
+    <script>
+    // Parse Initialization
+    // Add JavaScript for Logout
+    </script>
+    
+    </head>
+    <body>
+        <div class="container">
+            <h1>Member Area</h1>
+            <p>Welcome to the exclusive member area!</p>
+            <iframe src="https://www.intervalworld.com/" style="width:100%; height:600px; border:none;"></iframe>
+            <button class='logout-button' onclick='logout()'>Logout</button>
+        </div>
+        <script>
+            function logout() {
+                Parse.User.logOut().then(function() {
+                    alert('User logged out successfully!');
+                    window.location.href = 'index.html'; // Redirect to home page
+                }).catch(function(error) {
+                    alert('Error: ' + error.message);
+                });
+            }
+        </script>
+    </body>
+    </html>
